@@ -1,0 +1,71 @@
+.product-card {
+  background-color: var(--secondary-color);
+  padding: 24px 32px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers all content horizontally */
+  gap: 16px;
+  width: fit-content; /* shrink to content width */
+  margin: 0 auto; /* center the card horizontally if needed */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+}
+
+.product-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.product-card p {
+  font-size: 1.125rem;
+  color: var(--muted-text-color);
+  text-align: center;
+}
+
+.product-card a {
+  color: var(--accent-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.product-card a:hover {
+  color: #60a5fa;
+}
+
+.product-card-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center; /* center buttons */
+}
+
+.product-card-buttons button {
+  background-color: var(--accent-color);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-card-buttons button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.product-card .error {
+  color: #f87171;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+}

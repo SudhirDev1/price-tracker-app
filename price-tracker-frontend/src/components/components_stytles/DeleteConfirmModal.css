@@ -1,0 +1,74 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  pointer-events: auto; /* ensures overlay blocks background */
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.modal {
+  background-color: var(--secondary-color);
+  padding: 30px 40px;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  pointer-events: auto; /* ensures modal itself receives events */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.modal p {
+  font-size: 1.125rem;
+  color: var(--muted-text-color);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  background-color: var(--accent-color);
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-buttons button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.modal-buttons button.danger {
+  background-color: #f87171;
+}
+
+.modal-buttons button.danger:hover {
+  background-color: #ef4444;
+  transform: translateY(-2px);
+}
